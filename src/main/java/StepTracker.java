@@ -25,8 +25,9 @@ public class StepTracker {
     }
 
     public double averageSteps() {
-        double total = 0;
+        if (steps.size() == 0) return 0;
 
+        double total = 0;
         for (Integer day : steps) {
             total += day.doubleValue();
         }
